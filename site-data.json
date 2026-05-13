@@ -1,0 +1,243 @@
+{
+  "profile": {
+    "displayName": "Yuuki",
+    "username": "@sasutendo",
+    "tagline": "HEYYY LISTEN",
+    "bio": "Gamer, artist, coder, osu! enjoyer, and lover of cozy dark fantasy aesthetics.",
+    "avatar": "assets/profile.jpg",
+    "banner": "assets/banner.png",
+    "badges": [
+      "trans",
+      "she/her",
+      "eepy",
+      "artist",
+      "coder"
+    ],
+    "aboutIntro": "Hiiyaaa, I'm Yuuki.\nAm 21.\nI like osu!, coding, anime, gaming and hella lots more. \nThis page is a small place for my socials, projects, and things I care about. \nFeel free to explore and reach out if you wanna chat or collab on something fun! ♡. \nMy Discord is @Sasutendo",
+    "names": [
+      "Yuuki",
+      "Yui",
+      "Sasutendo",
+      "Sasu"
+    ],
+    "pronouns": [
+      "trans",
+      "she/her"
+    ],
+    "likes": [
+      "cats",
+      "coffee",
+      "osu!",
+      "cozy designs",
+      "dark fantasy",
+      "anime art"
+    ],
+    "boundaries": [
+      "don’t be creepy",
+      "don’t spam",
+      "don’t be overly formal"
+    ],
+    "words": {
+      "honorifics": [
+        "ms.",
+        "ma'am",
+        "madam"
+      ],
+      "compliments": [
+        "pretty",
+        "cute",
+        "handsome"
+      ],
+      "relationships": [
+        "friend",
+        "partner",
+        "princess"
+      ]
+    }
+  },
+  "theme": {
+    "accent": "#ff4fbd",
+    "secondary": "#8b5cf6",
+    "background": "assets/bg.jpg",
+    "backgroundDarkness": 0.1,
+    "cardOpacity": 0.25,
+    "nameColor": "#ff92ff",
+    "avatarDecor": "crown",
+    "avatarBubbleStyle": "moon",
+    "avatarBubbleColor": "#f3ff88",
+    "avatarBubbleIcon": "none",
+    "themeStyle": "sakura",
+    "particles": true,
+    "particleStyle": "fireflies",
+    "cursorTrail": "sakura",
+    "musicVolume": 0.15,
+    "intro": true
+  },
+  "socials": [
+    {
+      "label": "TikTok",
+      "icon": "♪",
+      "url": "https://tiktok.com/@sasutendo"
+    },
+    {
+      "label": "Instagram",
+      "icon": "◎",
+      "url": "https://instagram.com/sasutendo"
+    },
+    {
+      "label": "Twitch",
+      "icon": "▣",
+      "url": "https://twitch.tv/am_sasutendo"
+    },
+    {
+      "label": "YouTube",
+      "icon": "▶",
+      "url": "https://youtube.com/@sasutendo"
+    },
+    {
+      "label": "GitHub",
+      "icon": "⌘",
+      "url": "https://github.com/Sasutendo"
+    }
+  ],
+  "links": [
+    {
+      "title": "Join My Discord | RedTales",
+      "description": "  Come hang out and chat.",
+      "icon": "☁",
+      "url": "https://discord.gg/9hfnXKx7xZ",
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "title": "Join my Minecraft Discord | SnowVale",
+      "description": "  Come hang out, chat with us and wait till the next big Minecraft Event is getting hostet here",
+      "icon": "✦",
+      "url": "https://discord.com/invite/wEDYTKg739",
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "title": "TikTok",
+      "description": "  Short clips and posts.",
+      "icon": "♪",
+      "url": "https://tiktok.com/@sasutendo",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "Twitch",
+      "description": "  Streams and cozy chaos.",
+      "icon": "▣",
+      "url": "https://twitch.tv/am_sasutendo",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "YouTube",
+      "description": "  Videos and projects.",
+      "icon": "▶",
+      "url": "https://youtube.com/@sasutendo",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "Spotify",
+      "description": "  Music vibe.",
+      "icon": "♫",
+      "url": "https://open.spotify.com/user/1z5q051gcrmu6ckbybvr16uj2?si=4e940770b45c44a4",
+      "featured": false,
+      "enabled": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "NamAI",
+      "description": "Personal AI character chat app with memory, accounts, and custom themes. \nMade for Fun",
+      "url": "https://nya.namai.fun"
+    },
+    {
+      "title": "Plugins",
+      "description": "Minecraft plugins with GUI, rewards, dailies, economy system, and more.",
+      "url": "#"
+    },
+    {
+      "title": "Bettle",
+      "description": "Minecraft Fabric Horror mod experiments, custom items, and visual ideas. Soon to be released",
+      "url": "#"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Web Development",
+      "url": "#"
+    },
+    {
+      "title": "Minecraft Plugins",
+      "url": "#"
+    },
+    {
+      "title": "UI Design",
+      "url": "#"
+    },
+    {
+      "title": "Drawing",
+      "url": "#"
+    },
+    {
+      "title": "Photo Editing",
+      "url": "#"
+    },
+    {
+      "title": "OBS Assets",
+      "url": "#"
+    },
+    {
+      "title": "Story Writing",
+      "url": "#"
+    },
+    {
+      "title": "Databases",
+      "url": "#"
+    },
+    {
+      "title": "Creative Direction",
+      "url": "#"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Cozy Profile Theme",
+      "image": "assets/banner.png",
+      "url": "assets/banner.png"
+    },
+    {
+      "title": "Night Aesthetic",
+      "image": "assets/bg.jpg",
+      "url": "assets/bg.jpg"
+    },
+    {
+      "title": "Minecraft Ideas",
+      "image": "assets/meme1.png",
+      "url": "assets/meme1.png"
+    },
+    {
+      "title": "Stream Assets",
+      "image": "assets/meme2.png",
+      "url": "assets/meme2.png"
+    }
+  ],
+  "changelogs": [
+    {
+      "date": "2026-05-12",
+      "title": "Website started",
+      "text": "Added profile, links, gallery, particles, and admin editing."
+    },
+    {
+      "date": "2026-05-12",
+      "title": "Design update",
+      "text": "Improved dark dreamy layout and profile customization."
+    }
+  ],
+  "footer": "made with ♡ by Yuuki"
+}

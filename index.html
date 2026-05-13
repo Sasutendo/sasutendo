@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sasutendo</title>
+
+  <link rel="icon" type="image/png" href="assets/profile.jpg" />
+  <link rel="stylesheet" href="style.css?v=11" />
+</head>
+
+<body>
+  <div id="backgroundLayer"></div>
+  <div id="particleLayer"></div>
+
+  <!-- INTRO -->
+  <section id="introScreen" class="intro-screen">
+    <button id="enterButton" class="enter-button">
+      click to enter...
+    </button>
+  </section>
+
+  <!-- APP -->
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">✦</span>
+        <span id="siteTitle">Sasutendo</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#links">Links</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#changelogs">Changelog</a>
+        <div class="music-control">
+          <button id="musicButton" class="small-button">♪ Music Off</button>
+
+          <div class="volume-popover">
+            <label>
+              Volume
+              <input id="musicVolumeSlider" type="range" min="0" max="100" value="22" />
+            </label>
+            <span id="musicVolumeText">22%</span>
+          </div>
+        </div>
+        <button id="adminOpenButton" class="small-button admin-button">Admin</button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero section-card">
+      <div class="hero-banner"></div>
+
+      <div class="profile-row">
+        <div class="avatar-wrap">
+          <img id="profileAvatar" class="avatar" src="assets/profile.jpg" alt="Profile picture" />
+          <span class="avatar-bubble"></span>
+        </div>
+
+        <div class="profile-main">
+          <div class="name-row">
+            <h1 id="displayName">Yuuki</h1>
+            <span id="usernameBadge" class="username-badge">@sasutendo</span>
+          </div>
+
+          <p id="tagline" class="tagline">
+            See the light is shining so bright
+          </p>
+
+          <p id="bio" class="bio">
+            Gamer, artist, coder, osu! enjoyer, and lover of cozy dark fantasy aesthetics.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-lower-row">
+        <div id="socialIconRow" class="social-icon-row"></div>
+        <div id="badgeList" class="badge-list"></div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links" class="section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Socials</p>
+          <h2>My links</h2>
+        </div>
+        <span class="section-sparkle">✦</span>
+      </div>
+
+      <div id="featuredLinks" class="featured-links"></div>
+      <div id="normalLinks" class="link-grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Profile</p>
+          <h2>About me</h2>
+        </div>
+        <span class="section-sparkle">♡</span>
+      </div>
+
+      <div id="aboutIntroCard" class="about-intro-card"></div>
+
+      <div class="about-grid">
+        <article class="mini-card">
+          <h3>Names</h3>
+          <ul id="namesList"></ul>
+        </article>
+
+        <article class="mini-card">
+          <h3>Pronouns</h3>
+          <ul id="pronounsList"></ul>
+        </article>
+
+        <article class="mini-card">
+          <h3>Words</h3>
+          <div id="wordsGrid" class="words-grid"></div>
+        </article>
+
+        <article class="mini-card">
+          <h3>Likes</h3>
+          <div id="likesList" class="pill-list"></div>
+        </article>
+
+        <article class="mini-card">
+          <h3>Boundaries</h3>
+          <div id="boundariesList" class="pill-list"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Work</p>
+          <h2>Projects & skills</h2>
+        </div>
+        <span class="section-sparkle">✧</span>
+      </div>
+
+      <div id="projectGrid" class="project-grid"></div>
+
+      <div class="skill-box">
+        <h3>Abilities</h3>
+        <div id="skillGrid" class="skill-grid"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h2>Favorite things</h2>
+        </div>
+        <span class="section-sparkle">✿</span>
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <!-- CHANGELOGS -->
+    <section id="changelogs" class="section-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Updates</p>
+          <h2>Changelogs</h2>
+          </div>
+        <span class="section-sparkle">✦</span>
+      </div>
+
+      <div id="changelogList" class="changelog-list"></div>
+    </section>
+
+    <footer class="footer">
+      <p id="footerText">made with ♡ by Yuuki</p>
+    </footer>
+  </main>
+
+  <!-- ADMIN MODAL -->
+  <section id="adminModal" class="admin-modal hidden">
+    <div class="admin-card">
+      <div class="admin-header">
+        <div>
+          <h2>Website Editor</h2>
+          <p>Edit your profile, links, theme, and sections.</p>
+        </div>
+        <button id="adminCloseButton" class="circle-button">×</button>
+      </div>
+      
+    <div class="admin-tabs">
+        <button class="admin-tab active" data-admin-tab="profile">Profile</button>
+        <button class="admin-tab" data-admin-tab="socials">Socials</button>
+
+        <button class="admin-tab" data-admin-tab="links">Links</button>
+
+        <button class="admin-tab" data-admin-tab="about">About</button>
+
+        <button class="admin-tab" data-admin-tab="projects">Projects</button>
+
+        <button class="admin-tab" data-admin-tab="gallery">Gallery</button>
+        
+        <button class="admin-tab" data-admin-tab="changelogs">Changelogs</button>
+        
+        <button class="admin-tab" data-admin-tab="theme">Theme</button>
+        <button class="admin-tab" data-admin-tab="data">Data</button>
+    </div>
+
+      <div class="admin-scroll">
+        <!-- PROFILE TAB -->
+        <div class="admin-panel active" data-admin-panel="profile">
+          <label>
+            Display Name
+            <input id="editDisplayName" type="text" />
+          </label>
+
+          <label>
+            Username
+            <input id="editUsername" type="text" />
+          </label>
+
+          <label>
+            Tagline
+            <input id="editTagline" type="text" />
+          </label>
+
+          <label>
+            Bio
+            <textarea id="editBio"></textarea>
+          </label>
+
+          <label>
+            Avatar URL
+            <input id="editAvatar" type="text" placeholder="assets/profile.png or image URL" />
+          </label>
+
+          <label>
+            Banner URL
+            <input id="editBanner" type="text" placeholder="assets/banner.png or image URL" />
+          </label>
+
+          <label>
+            Badges, comma separated
+            <input id="editBadges" type="text" />
+          </label>
+
+          <label>
+            Names, comma separated
+            <input id="editNames" type="text" />
+          </label>
+
+          <label>
+            Pronouns, comma separated
+            <input id="editPronouns" type="text" />
+          </label>
+
+          <label>
+            Likes, comma separated
+            <input id="editLikes" type="text" />
+          </label>
+
+          <label>
+            Boundaries, comma separated
+            <input id="editBoundaries" type="text" />
+          </label>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div class="admin-panel" data-admin-panel="about">
+        <h3>About Section</h3>
+
+        <label>
+            Names, comma separated
+            <input id="editAboutNames" type="text" />
+        </label>
+
+        <label>
+          About Introduction
+          <textarea id="editAboutIntro" placeholder="Write a short introduction about yourself..."></textarea>
+        </label>
+
+        <label>
+            Pronouns, comma separated
+            <input id="editAboutPronouns" type="text" />
+        </label>
+
+        <label>
+            Honorifics, comma separated
+            <input id="editWordsHonorifics" type="text" />
+        </label>
+
+        <label>
+            Compliments, comma separated
+            <input id="editWordsCompliments" type="text" />
+        </label>
+
+        <label>
+            Relationship Words, comma separated
+            <input id="editWordsRelationships" type="text" />
+        </label>
+
+        <label>
+            Likes, comma separated
+            <textarea id="editAboutLikes"></textarea>
+        </label>
+
+        <label>
+            Boundaries, comma separated
+            <textarea id="editAboutBoundaries"></textarea>
+        </label>
+        </div>
+
+        <!-- PROJECTS TAB -->
+        <div class="admin-panel" data-admin-panel="projects">
+        <div class="admin-row">
+            <button id="addProjectButton" class="admin-action">+ Add project</button>
+        </div>
+
+        <div id="projectEditorList" class="link-editor-list"></div>
+
+        <label>
+        Abilities / Skills
+            <small class="field-help">One per line. Use: Skill Name|https://link.com</small>
+            <textarea id="editSkills" placeholder="Web Development|https://example.com&#10;Minecraft Plugins|#"></textarea>
+        </label>
+        </div>
+
+        <!-- GALLERY TAB -->
+        <div class="admin-panel" data-admin-panel="gallery">
+        <div class="admin-row">
+            <button id="addGalleryButton" class="admin-action">+ Add gallery item</button>
+        </div>
+
+        <div id="galleryEditorList" class="link-editor-list"></div>
+
+
+        <label>
+            Footer Text
+            <input id="editFooterText" type="text" />
+        </label>
+        </div>
+
+        <!-- CHANGELOGS TAB -->
+        <div class="admin-panel" data-admin-panel="changelogs">
+          <div class="admin-row">
+            <button id="addChangelogButton" class="admin-action">+ Add changelog</button>
+          </div>
+
+          <div id="changelogEditorList" class="link-editor-list"></div>
+        </div>
+
+
+        <!-- LINKS TAB -->
+        <div class="admin-panel" data-admin-panel="links">
+          <div class="admin-row">
+            <button id="addLinkButton" class="admin-action">+ Add link</button>
+          </div>
+
+          <div id="linkEditorList" class="link-editor-list"></div>
+        </div>
+
+
+        <!-- SOCIALS TAB -->
+        <div class="admin-panel" data-admin-panel="socials">
+        <p class="admin-note">
+            These are the small icon buttons shown under your profile.
+        </p>
+
+        <div class="admin-row">
+            <button id="addSocialButton" class="admin-action">+ Add social</button>
+        </div>
+
+        <div id="socialEditorList" class="link-editor-list"></div>
+        </div>
+
+        <!-- THEME TAB -->
+        <div class="admin-panel" data-admin-panel="theme">
+          <label>
+            Accent Color
+            <input id="editAccent" type="color" />
+          </label>
+
+          <label>
+            Secondary Color
+            <input id="editSecondary" type="color" />
+          </label>
+
+          <label>
+            Background Image URL
+            <input id="editBackground" type="text" placeholder="assets/bg.jpg or image URL" />
+          </label>
+
+          <label>
+            Background Darkness
+            <input id="editBackgroundDarkness" type="range" min="0" max="0.9" step="0.05" />
+            <small id="darknessValue"></small>
+          </label>
+
+          <label>
+            Box Transparency
+            <input id="editCardOpacity" type="range" min="0.15" max="1" step="0.05" />
+            <small id="cardOpacityValue"></small>
+          </label>
+
+          <label>
+            Name Color
+            <input id="editNameColor" type="color" />
+          </label>
+
+          <label>
+            Profile Picture Decor
+            <select id="editAvatarDecor">
+              <option value="none">None</option>
+              <option value="softRing">Soft Ring</option>
+              <option value="moon">Moon Charm</option>
+              <option value="cat">Cat Ears</option>
+              <option value="stars">Star Halo</option>
+              <option value="sakura">Sakura Frame</option>
+              <option value="crown">Tiny Crown</option>
+              <option value="ribbon">Ribbon Lace</option>
+              <option value="cloud">Dreamy Cloud</option>
+              <option value="pixel">Pixel Frame</option>
+              <option value="rose">Gothic Rose</option>
+              <option value="orbit">Neon Orbit</option>
+              <option value="pearl">Pearl Ring</option>
+              <option value="double">Double Ring</option>
+            </select>
+          </label>
+
+          <label>
+            Little Bubble Style
+            <select id="editAvatarBubbleStyle">
+              <option value="none">None</option>
+              <option value="gradient">Gradient Bubble</option>
+              <option value="glossy">Glossy Bubble</option>
+              <option value="pearl">Pearl Bubble</option>
+              <option value="moon">Moon Bubble</option>
+              <option value="flower">Flower Bubble</option>
+              <option value="heart">Heart Bubble</option>
+              <option value="spark">Spark Bubble</option>
+              <option value="miniRing">Mini Ring</option>
+            </select>
+          </label>
+
+          <label>
+            Little Bubble Color
+            <input id="editAvatarBubbleColor" type="color" />
+          </label>
+
+          <label>
+            Little Bubble Icon
+            <select id="editAvatarBubbleIcon">
+              <option value="none">None</option>
+              <option value="moon">Moon</option>
+              <option value="heart">Heart</option>
+              <option value="star">Star</option>
+              <option value="flower">Flower</option>
+              <option value="sparkle">Sparkle</option>
+              <option value="music">Music Note</option>
+            </select>
+          </label>
+
+          <label>
+            Theme Style
+            <select id="editThemeStyle">
+                <option value="dreamy">Dreamy Purple</option>
+                <option value="darkrose">Dark Rose</option>
+                <option value="midnight">Midnight Blue</option>
+                <option value="sakura">Sakura Night</option>
+                <option value="candy">Candy Glow</option>
+                <option value="forest">Dark Forest</option>
+                <option value="ocean">Deep Ocean</option>
+                <option value="sunset">Sunset Dream</option>
+                <option value="terminal">Red Terminal</option>
+                <option value="mono">Mono Black</option>
+                <option value="aurora">Aurora</option>
+                <option value="cozy">Cozy Cafe</option>
+                <option value="vampire">Vampire Velvet</option>
+                <option value="cyber">Cyber Sakura</option>
+                <option value="witch">Witchy Night</option>
+                <option value="lavender">Lavender Milk</option>
+                <option value="strawberry">Strawberry Noir</option>
+                <option value="space">Deep Space</option>
+                <option value="gold">Royal Gold</option>
+            </select>
+          </label>
+
+        <label>
+            Particle Style
+            <select id="editParticleStyle">
+                <option value="stars">Soft Stars</option>
+                <option value="sakura">Sakura Petals</option>
+                <option value="hearts">Tiny Hearts</option>
+                <option value="snow">Snow Dust</option>
+                <option value="bubbles">Dream Bubbles</option>
+                <option value="fireflies">Fireflies</option>
+                <option value="moons">Tiny Moons</option>
+                <option value="diamonds">Diamonds</option>
+                <option value="leaves">Forest Leaves</option>
+                <option value="embers">Cozy Embers</option>
+                <option value="rain">Soft Rain</option>
+                <option value="pixels">Pixel Dust</option>
+                <option value="none">None</option>
+            </select>
+        </label>
+
+        <label>
+            Cursor Trail
+            <select id="editCursorTrail">
+                <option value="none">None</option>
+                <option value="sparkle">Sparkle</option>
+                <option value="sakura">Sakura</option>
+                <option value="hearts">Hearts</option>
+                <option value="stars">Stars</option>
+                <option value="bubbles">Bubbles</option>
+                <option value="fireflies">Fireflies</option>
+                <option value="butterflies">Butterflies</option>
+                <option value="music">Music Notes</option>
+                <option value="paw">Cat Paws</option>
+                <option value="candy">Candy Pop</option>
+                <option value="clouds">Cloud Puff</option>
+            </select>
+        </label>
+
+          <label class="toggle-label">
+            <input id="editParticles" type="checkbox" />
+            Animated particles
+          </label>
+
+          <label class="toggle-label">
+            <input id="editIntro" type="checkbox" />
+            Show click-to-enter intro
+          </label>
+        </div>
+
+        <!-- DATA TAB -->
+        <div class="admin-panel" data-admin-panel="data">
+          <p class="admin-note">
+            Export your data after editing. For Cloudflare Pages/GitHub, paste this data into app.js later if you want it to be the public default for everyone.
+          </p>
+
+          <label>
+            Website JSON Data
+            <textarea id="dataEditor" class="data-editor"></textarea>
+          </label>
+
+          <div class="admin-row">
+            <button id="importDataButton" class="admin-action">Import JSON</button>
+            <button id="exportDataButton" class="admin-action">Export JSON</button>
+            <button id="resetDataButton" class="admin-danger">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-save">
+        <button id="saveAdminButton">Save Changes</button>
+      </div>
+    </div>
+  </section>
+
+  <audio id="bgMusic" loop src="assets/music.mp3"></audio>
+
+  <script src="app.js?v=11"></script>
+</body>
+</html>
