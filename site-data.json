@@ -207,22 +207,22 @@
   ],
   "gallery": [
     {
-      "title": "Cozy Profile Theme",
+      "title": "Profile Banner",
       "image": "assets/banner.png",
       "url": "assets/banner.png"
     },
     {
-      "title": "Night Aesthetic",
+      "title": "Austria",
       "image": "assets/bg.jpg",
       "url": "assets/bg.jpg"
     },
     {
-      "title": "Minecraft Ideas",
+      "title": "Meme",
       "image": "assets/meme1.png",
       "url": "assets/meme1.png"
     },
     {
-      "title": "Stream Assets",
+      "title": "Me",
       "image": "assets/meme2.png",
       "url": "assets/meme2.png"
     }
