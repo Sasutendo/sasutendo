@@ -2932,3 +2932,57 @@ body[data-avatar-decor="double"] .avatar {
     transform: translate(-50%, -50%) translateY(22px) rotate(70deg) scale(0.25);
   }
 }
+
+/* =========================================================
+   VISITOR COUNTER
+   ========================================================= */
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 4px;
+}
+
+.stat-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.10), transparent),
+    rgba(255, 255, 255, calc(var(--card-opacity, 0.75) * 0.12));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.22),
+    0 0 18px color-mix(in srgb, var(--accent) 14%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.stat-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  font-size: 14px;
+}
+
+.stat-card div {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stat-card strong {
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.stat-card span:last-child {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}

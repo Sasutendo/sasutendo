@@ -516,6 +516,35 @@ function renderChangelogs() {
   });
 }
 
+async function setupVisitCounter() {
+  const visitCount = $("#visitCount");
+  if (!visitCount) return;
+
+  try {
+    const sessionKey = "sasutendo-counted-visit";
+
+    const method = sessionStorage.getItem(sessionKey) ? "GET" : "POST";
+
+    const response = await fetch("/api/visit", {
+      method,
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error("Could not load visits");
+    }
+
+    const data = await response.json();
+
+    visitCount.textContent = Number(data.visits || 0).toLocaleString();
+
+    sessionStorage.setItem(sessionKey, "true");
+  } catch (error) {
+    console.warn("Visit counter failed:", error);
+    visitCount.textContent = "0";
+  }
+}
+
 function renderFooter() {
   $("#footerText").textContent = siteData.footer;
 }
@@ -1509,6 +1538,7 @@ async function initSite() {
   setupIntroAndMusic();
   setupCursorTrail();
   renderSite();
+  setupVisitCounter();
 }
 
 initSite();
