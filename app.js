@@ -522,23 +522,23 @@ async function setupVisitCounter() {
 
   try {
     const sessionKey = "sasutendo-counted-visit";
-
-    const method = sessionStorage.getItem(sessionKey) ? "GET" : "POST";
+    const alreadyCounted = sessionStorage.getItem(sessionKey) === "true";
 
     const response = await fetch("/api/visit", {
-      method,
+      method: alreadyCounted ? "GET" : "POST",
       cache: "no-store"
     });
 
     if (!response.ok) {
-      throw new Error("Could not load visits");
+      throw new Error(`Visit API failed: ${response.status}`);
     }
 
     const data = await response.json();
-
     visitCount.textContent = Number(data.visits || 0).toLocaleString();
 
-    sessionStorage.setItem(sessionKey, "true");
+    if (!alreadyCounted) {
+      sessionStorage.setItem(sessionKey, "true");
+    }
   } catch (error) {
     console.warn("Visit counter failed:", error);
     visitCount.textContent = "0";

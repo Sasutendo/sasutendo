@@ -2986,3 +2986,72 @@ body[data-avatar-decor="double"] .avatar {
   font-size: 13px;
   font-weight: 800;
 }
+
+/* =========================================================
+   VISITOR COUNTER FIX
+   ========================================================= */
+
+.stats-section {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 2px;
+  padding: 0 16px;
+}
+
+.stat-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 120px;
+  padding: 10px 15px;
+  border-radius: 999px;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.10), transparent),
+    rgba(20, 18, 32, 0.72);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.22),
+    0 0 18px color-mix(in srgb, var(--accent) 16%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.stat-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  font-size: 13px;
+}
+
+.stat-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.stat-text strong {
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.stat-text span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.footer {
+  position: relative;
+  z-index: 3;
+}
