@@ -3,7 +3,7 @@
     "displayName": "Yuuki",
     "username": "@sasutendo",
     "tagline": "HEYYY LISTEN",
-    "bio": "Gamer, artist, coder, osu! enjoyer, and lover of cozy dark fantasy aesthetics.",
+    "bio": "Gamer, artist, Tattoo artist, coder, osu! enjoyer, and lover of cozy dark fantasy aesthetics.",
     "avatar": "assets/profile.jpg",
     "banner": "assets/banner.png",
     "badges": [
@@ -11,9 +11,10 @@
       "she/her",
       "eepy",
       "artist",
-      "coder"
+      "coder",
+      "tattoo"
     ],
-    "aboutIntro": "Hiiyaaa, I'm Yuuki.\nAm 21.\nI like osu!, coding, anime, gaming and hella lots more. \nThis page is a small place for my socials, projects, and things I care about. \nFeel free to explore and reach out if you wanna chat or collab on something fun! ♡. \nMy Discord is @Sasutendo",
+    "aboutIntro": "Hiiyaaa, I'm Yuuki.\nAm 21.\nI like osu!, coding, anime, tattoos, gaming and hella lots more. \nThis page is a small place for my socials, projects, and things I care about. \nFeel free to explore and reach out if you wanna chat or collab on something fun! ♡. \nMy Discord is @Sasutendo",
     "names": [
       "Yuuki",
       "Yui",
@@ -28,6 +29,7 @@
       "cats",
       "coffee",
       "osu!",
+      "tattoos",
       "cozy designs",
       "dark fantasy",
       "anime art"
@@ -50,8 +52,7 @@
       ],
       "relationships": [
         "friend",
-        "partner",
-        "princess"
+        "partner"
       ]
     }
   },
