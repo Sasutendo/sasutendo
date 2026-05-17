@@ -149,6 +149,14 @@
       "url": "https://open.spotify.com/user/1z5q051gcrmu6ckbybvr16uj2?si=4e940770b45c44a4",
       "featured": false,
       "enabled": true
+    },
+    {
+      "title": "Osu",
+      "description": "My Osu Account :3",
+      "icon": "𐔌՞. .՞𐦯",
+      "url": "https://osu.ppy.sh/users/30513654",
+      "featured": true,
+      "enabled": true
     }
   ],
   "projects": [
