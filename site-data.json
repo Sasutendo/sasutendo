@@ -163,7 +163,7 @@
     {
       "title": "NamAI",
       "description": "Personal AI character chat app with memory, accounts, and custom themes. \nMade for Fun",
-      "url": "https://nya.namai.fun"
+      "url": "#"
     },
     {
       "title": "Plugins",
@@ -237,6 +237,11 @@
     }
   ],
   "changelogs": [
+    {
+      "date": "2026-06-11",
+      "title": "AI Closure",
+      "text": "Closed down own AI cause of Server costs"
+    },
     {
       "date": "2026-05-12",
       "title": "Website started",
