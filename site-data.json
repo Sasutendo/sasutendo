@@ -57,7 +57,7 @@
   },
   "theme": {
     "accent": "#ff4fbd",
-    "secondary": "#8b5cf6",
+    "secondary": "#a30000",
     "background": "assets/bg.jpg",
     "backgroundDarkness": 0.1,
     "cardOpacity": 0.25,
@@ -66,7 +66,7 @@
     "avatarBubbleStyle": "moon",
     "avatarBubbleColor": "#f3ff88",
     "avatarBubbleIcon": "none",
-    "themeStyle": "sakura",
+    "themeStyle": "strawberry",
     "particles": true,
     "particleStyle": "fireflies",
     "cursorTrail": "sakura",
