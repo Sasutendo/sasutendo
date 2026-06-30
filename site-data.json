@@ -22,7 +22,6 @@
       "Sasu"
     ],
     "pronouns": [
-      "trans",
       "she/her"
     ],
     "likes": [
@@ -174,6 +173,11 @@
       "title": "Bettle",
       "description": "Minecraft Fabric Horror mod experiments, custom items, and visual ideas. Soon to be released",
       "url": "#"
+    },
+    {
+      "title": "CozyBond",
+      "description": "CozyBond is my newest Project.\nIts an about a App that tracks the relationship things a bit better with some mini games, badges and more fun Features\nIts also a fully functional Website and Android App.",
+      "url": "#"
     }
   ],
   "skills": [
@@ -234,6 +238,36 @@
       "title": "Me",
       "image": "assets/meme2.png",
       "url": "assets/meme2.png"
+    },
+    {
+      "title": "Bottom Energy",
+      "image": "assets/more-bottom-energy.jpg",
+      "url": "assets/more-bottom-energy.jpg"
+    },
+    {
+      "title": "Dont wake up a Princess",
+      "image": "assets/no-wakey.jpg",
+      "url": "assets/no-wakey.jpg"
+    },
+    {
+      "title": "Fihh",
+      "image": "assets/fihh.png",
+      "url": "assets/fihh.png"
+    },
+    {
+      "title": "Shork",
+      "image": "assets/shork.png",
+      "url": "assets/shork.png"
+    },
+    {
+      "title": "Boring Ahh Pic",
+      "image": "assets/boredom.png",
+      "url": "assets/boredom.png"
+    },
+    {
+      "title": "Maybe",
+      "image": "assets/bottom.jpg",
+      "url": "assets/bottom.jpg"
     }
   ],
   "changelogs": [
