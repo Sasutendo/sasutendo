@@ -18,7 +18,7 @@ I make cozy things, chaotic things, and sometimes things that are somehow both.
 
 I'm **Yuuki**, also known as **Sasutendo**. I'm 21 and spend a lot of my time creating, gaming, coding, drawing, and collecting far too many ideas for future projects.
 
-I like personal projects that feel a little different: cozy interfaces, dark fantasy, playful details, hidden interactions, Minecraft experiments, and designs that actually feel like *me*.
+I like personal projects that feel a little different: cozy interfaces, dark fantasy, playful details, Minecraft experiments, and designs that actually feel like *me*.
 
 - 🎮 Usually playing **osu!**, Minecraft, or whatever currently has my attention
 - 🎨 Into drawing, tattoo art, photo editing, and stream graphics
@@ -46,7 +46,7 @@ A small home for my socials, projects, gallery, interests, and updates—built t
 
 ## 🩷 This website
 
-The source for [sasutendo.tech](https://sasutendo.tech) lives in this repository. It is colorful, animated, customizable, and designed for phones as well as desktop screens.
+The repository lets visitors look through the project behind [sasutendo.tech](https://sasutendo.tech). The website is colorful, animated, personal, and designed for phones as well as desktop screens.
 
 ### Highlights
 
@@ -57,46 +57,27 @@ The source for [sasutendo.tech](https://sasutendo.tech) lives in this repository
 - Changelog and visitor counter
 - Responsive desktop, tablet, and phone layouts
 - Lightweight vanilla HTML, CSS, and JavaScript
+- Cloudflare Pages Functions and KV for shared production data
 
-### Built with
+## 👀 Viewing and sharing
 
-- HTML
-- CSS
-- Vanilla JavaScript
-- Node.js and Express for local development
-- Cloudflare Pages Functions and KV for production data
+This repository and website are shared for **viewing and personal reference only**. They are not open source and are not provided as a template.
 
-## 🌸 Run it locally
+You may:
 
-You will need a recent version of [Node.js](https://nodejs.org/).
+- View the official website
+- Read the repository when access is provided
+- Share unmodified links to the official website or repository
 
-```bash
-npm install
-npm start
-```
+You may **not** copy, download, clone, fork, recreate, modify, redistribute, host, sell, market, advertise, or reuse the website, its code, its design, or any of its assets without my prior written permission.
 
-Then open [http://localhost:3333](http://localhost:3333).
+Sharing a link does not give anyone permission to reuse the project.
 
-## 📁 Project map
+## 📜 Rights
 
-```text
-.
-├── assets/          Images, backgrounds, and music
-├── functions/       Cloudflare Pages API routes
-├── app.js           Website rendering and interactions
-├── index.html       Main page structure
-├── site-data.json   Public profile and website content
-├── style.css        Themes, layouts, and animations
-└── server.js        Local Express development server
-```
+**© 2026 Yuuki (Sasutendo). All rights reserved.**
 
-Most public content can be changed in `site-data.json`. Visual styling and animations live in `style.css`, while rendering and interactions are handled by `app.js`.
-
-## 📜 License
-
-The source code is available under the [MIT License](./LICENSE).
-
-Personal text, branding, artwork, images, GIFs, audio, profile content, and other media assets are **not** included in the MIT license unless explicitly stated otherwise. Those materials remain the property of their respective owners.
+The complete [view-only copyright notice](./LICENSE) applies to the source code, design, layout, text, branding, images, GIFs, audio, artwork, profile content, and every other part of this project.
 
 ---
 
