@@ -1,32 +1,64 @@
 <div align="center">
 
-<img src="./assets/banner.png" alt="Yuuki's website banner" width="100%" />
+<img src="./assets/banner.png" alt="Yuuki's banner" width="100%" />
 
-# ✦ Yuuki's little corner of the internet ✦
+# Hii, I'm Yuuki ♡
 
-A cozy personal link hub for my socials, projects, art, interests, and occasional updates.
+### she/her · artist · tattoo artist · gamer · coder
 
-[Visit the website](https://sasutendo.tech) · [GitHub profile](https://github.com/Sasutendo)
+I make cozy things, chaotic things, and sometimes things that are somehow both.
+
+[My website](https://sasutendo.tech) · [Twitch](https://twitch.tv/am_sasutendo) · [TikTok](https://tiktok.com/@sasutendo) · [Instagram](https://instagram.com/sasutendo) · [YouTube](https://youtube.com/@sasutendo)
 
 </div>
 
 ---
 
-## ♡ About
+## 🌙 About me
 
-This is the source for my personal website, **sasutendo.tech**. It is designed to feel like a small, dreamy corner of the internet rather than a regular portfolio: personal, colorful, animated, and easy to explore on desktop or mobile.
+I'm **Yuuki**, also known as **Sasutendo**. I'm 21 and spend a lot of my time creating, gaming, coding, drawing, and collecting far too many ideas for future projects.
 
-## ✨ Highlights
+I like personal projects that feel a little different: cozy interfaces, dark fantasy, playful details, hidden interactions, Minecraft experiments, and designs that actually feel like *me*.
 
-- Customizable profile, links, badges, projects, and gallery
+- 🎮 Usually playing **osu!**, Minecraft, or whatever currently has my attention
+- 🎨 Into drawing, tattoo art, photo editing, and stream graphics
+- 💻 Building websites, apps, Minecraft plugins, and Fabric mod experiments
+- ☕ Powered by coffee, music, cats, and questionable sleep schedules
+- ✦ Always interested in making something new, cute, strange, or atmospheric
+
+## 💫 Things I'm working on
+
+### CozyBond
+
+A relationship-focused website and Android app with shared tracking, mini-games, badges, and other cozy features.
+
+### Bettle
+
+A Minecraft Fabric horror mod with custom items, creatures, unsettling mechanics, and visual experiments.
+
+### Minecraft plugins
+
+GUI-based plugins with quests, rewards, daily systems, economies, and other server features.
+
+### My personal website
+
+A small home for my socials, projects, gallery, interests, and updates—built to feel more like a personal internet corner than a normal portfolio.
+
+## 🩷 This website
+
+The source for [sasutendo.tech](https://sasutendo.tech) lives in this repository. It is colorful, animated, customizable, and designed for phones as well as desktop screens.
+
+### Highlights
+
+- Custom profile, links, badges, projects, and gallery
 - Dreamy themes with adjustable colors and transparency
 - Animated particles and cursor trails
 - Background music with volume controls
 - Changelog and visitor counter
-- Responsive layouts for phones, tablets, and desktops
+- Responsive desktop, tablet, and phone layouts
 - Lightweight vanilla HTML, CSS, and JavaScript
 
-## 🛠️ Built with
+### Built with
 
 - HTML
 - CSS
@@ -58,15 +90,7 @@ Then open [http://localhost:3333](http://localhost:3333).
 └── server.js        Local Express development server
 ```
 
-## 🎨 Customizing the site
-
-Most public content lives in `site-data.json`, including the profile, links, projects, gallery, theme choices, and changelog entries.
-
-Visual styling and animations live in `style.css`, while rendering and interactions are handled by `app.js`. Media files belong in `assets/`.
-
-## ☁️ Deployment
-
-The production website is deployed with Cloudflare Pages. Files inside `functions/` become server-side API routes, and the `SITE_DATA` KV binding stores shared counters and site data.
+Most public content can be changed in `site-data.json`. Visual styling and animations live in `style.css`, while rendering and interactions are handled by `app.js`.
 
 ## 📜 License
 
