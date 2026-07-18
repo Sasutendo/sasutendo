@@ -102,14 +102,6 @@
   ],
   "links": [
     {
-      "title": "Nude Stuff",
-      "description": "heres some nude stuff >//<",
-      "icon": "✦",
-      "url": "/nude/",
-      "featured": true,
-      "enabled": true
-    },
-    {
       "title": "Join My Discord | RedTales",
       "description": "  Come hang out and chat.",
       "icon": "☁",
@@ -122,6 +114,14 @@
       "description": "  Come hang out, chat with us and wait till the next big Minecraft Event is getting hostet here",
       "icon": "✦",
       "url": "https://discord.com/invite/wEDYTKg739",
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "title": "Osu",
+      "description": "My Osu Account :3",
+      "icon": "𐔌՞. .՞𐦯",
+      "url": "https://osu.ppy.sh/users/30513654",
       "featured": true,
       "enabled": true
     },
@@ -158,11 +158,19 @@
       "enabled": true
     },
     {
-      "title": "Osu",
-      "description": "My Osu Account :3",
-      "icon": "𐔌՞. .՞𐦯",
-      "url": "https://osu.ppy.sh/users/30513654",
-      "featured": true,
+      "title": "Nude Stuff",
+      "description": "heres some nude stuff >//<",
+      "icon": "✦",
+      "url": "/nude/",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "GitHub",
+      "description": "My projects and code.",
+      "icon": "⌘",
+      "url": "https://github.com/Sasutendo",
+      "featured": false,
       "enabled": true
     }
   ],
