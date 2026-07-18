@@ -102,6 +102,14 @@
   ],
   "links": [
     {
+      "title": "Free Ditto :3",
+      "description": "A totally normal little surprise. Definitely safe to click.",
+      "icon": "✦",
+      "url": "/fun/",
+      "featured": true,
+      "enabled": true
+    },
+    {
       "title": "Join My Discord | RedTales",
       "description": "  Come hang out and chat.",
       "icon": "☁",
