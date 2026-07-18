@@ -2017,6 +2017,7 @@ body.owner-mode .admin-button {
   .volume-popover {
     left: 0;
     right: auto;
+    backdrop-filter: none;
   }
 }
 
@@ -2754,11 +2755,24 @@ body[data-avatar-decor="double"] .avatar {
   .section-card,
   .topbar,
   .admin-card {
-    backdrop-filter: blur(8px) !important;
+    backdrop-filter: none !important;
+    background-color: rgba(24, 20, 36, 0.88) !important;
   }
 
   .particle {
     animation-duration: 18s !important;
+    will-change: auto;
+  }
+
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+@supports (content-visibility: auto) {
+  .section-card:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 560px;
   }
 }
 
