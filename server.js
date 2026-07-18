@@ -13,6 +13,19 @@ const PUBLIC_DIR = __dirname;
 
 app.use(express.json({ limit: "10mb" }));
 
+let localNudeClickCount = 0;
+
+app.get("/api/nude-click", (req, res) => {
+  res.set("Cache-Control", "no-store");
+  res.json({ clicks: localNudeClickCount });
+});
+
+app.post("/api/nude-click", (req, res) => {
+  localNudeClickCount += 1;
+  res.set("Cache-Control", "no-store");
+  res.json({ clicks: localNudeClickCount });
+});
+
 app.post("/api/save-site-data", async (req, res) => {
   try {
     const data = req.body;
