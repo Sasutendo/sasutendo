@@ -102,6 +102,14 @@
   ],
   "links": [
     {
+      "title": "Nude Stuff",
+      "description": "heres some nude stuff >//<",
+      "icon": "✦",
+      "url": "/nude/",
+      "featured": true,
+      "enabled": true
+    },
+    {
       "title": "Join My Discord | RedTales",
       "description": "  Come hang out and chat.",
       "icon": "☁",
