@@ -194,20 +194,6 @@ const adminOpenButton = $("#adminOpenButton");
 const adminCloseButton = $("#adminCloseButton");
 const saveAdminButton = $("#saveAdminButton");
 
-let cachedNudePageHtml = "";
-
-fetch("/nude/", { cache: "force-cache" })
-  .then((response) => {
-    if (!response.ok) throw new Error(`Could not preload /nude/: ${response.status}`);
-    return response.text();
-  })
-  .then((html) => {
-    cachedNudePageHtml = html;
-  })
-  .catch((error) => {
-    console.warn("Could not preload the surprise page:", error);
-  });
-
 async function loadData() {
   try {
     const response = await fetch("/site-data.json", {
@@ -348,47 +334,6 @@ function renderSocials() {
   });
 }
 
-function isNudePrankUrl(value) {
-  try {
-    const url = new URL(value, window.location.href);
-    return (
-      url.origin === window.location.origin &&
-      url.pathname.replace(/\/+$/, "") === "/nude"
-    );
-  } catch {
-    return false;
-  }
-}
-
-function openNudePrankInNewTab(event, url) {
-  if (!cachedNudePageHtml) return;
-
-  const prankWindow = window.open("", "_blank");
-  if (!prankWindow) return;
-
-  event.preventDefault();
-
-  try {
-    prankWindow.document.open();
-    prankWindow.document.write(cachedNudePageHtml);
-    prankWindow.document.close();
-    prankWindow.history.replaceState(null, "", url);
-
-    const prankAudio = prankWindow.document.querySelector("#conga");
-    if (prankAudio) {
-      prankAudio.muted = false;
-      prankAudio.volume = 1;
-
-      const playAttempt = prankAudio.play();
-      if (playAttempt) playAttempt.catch(() => {});
-    }
-
-    prankWindow.opener = null;
-  } catch {
-    prankWindow.location.replace(url);
-  }
-}
-
 function renderLinks() {
   const featured = $("#featuredLinks");
   const normal = $("#normalLinks");
@@ -403,12 +348,6 @@ function renderLinks() {
       a.href = link.url;
       a.target = "_blank";
       a.rel = "noreferrer";
-
-      if (isNudePrankUrl(link.url)) {
-        a.addEventListener("click", (event) => {
-          openNudePrankInNewTab(event, link.url);
-        });
-      }
 
       if (link.featured) {
         a.className = "featured-link";
