@@ -485,7 +485,7 @@ function renderGallery() {
     article.rel = "noreferrer";
 
     article.innerHTML = `
-      <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async" fetchpriority="low" />
+      <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" />
       <p>${escapeHtml(item.title)}</p>
       <span class="gallery-open">Open ↗</span>
     `;
@@ -590,7 +590,7 @@ function renderParticles(force = false) {
   };
 
   const baseAmount = amountMap[style] || 34;
-  const amount = isPhone ? Math.ceil(baseAmount * 0.22) : baseAmount;
+  const amount = isPhone ? Math.ceil(baseAmount * 0.38) : baseAmount;
 
   for (let i = 0; i < amount; i++) {
     const particle = document.createElement("span");
@@ -1429,18 +1429,6 @@ function setupIntroAndMusic() {
   });
 
   if (volumeSlider) {
-    let saveVolumeTimer;
-
-    const persistVolume = () => {
-      window.clearTimeout(saveVolumeTimer);
-      saveVolumeTimer = window.setTimeout(() => {
-        saveData();
-
-        // Let other open tabs update too without blocking every slider movement.
-        localStorage.setItem("sasutendo-site-sync", String(Date.now()));
-      }, 350);
-    };
-
     volumeSlider.addEventListener("input", () => {
       const volume = Number(volumeSlider.value) / 100;
 
@@ -1451,7 +1439,10 @@ function setupIntroAndMusic() {
         volumeText.textContent = `${Math.round(volume * 100)}%`;
       }
 
-      persistVolume();
+      saveData();
+
+      // Let other open tabs update too
+      localStorage.setItem("sasutendo-site-sync", String(Date.now()));
     });
   }
 
@@ -1486,17 +1477,14 @@ function setupCursorTrail() {
 
   const isTouch = window.matchMedia("(pointer: coarse)").matches;
 
-  // Touch movement fires many pointer events while scrolling. The decorative
-  // trail is a desktop-only effect so taps and scrolling stay responsive.
-  if (isTouch) return;
-
   window.addEventListener("pointermove", (event) => {
     const style = siteData.theme.cursorTrail || "none";
     if (style === "none") return;
 
     const now = performance.now();
 
-    const delay = 32;
+    // phone / touch gets fewer trail elements
+    const delay = isTouch ? 95 : 32;
     if (now - lastTrailTime < delay) return;
     lastTrailTime = now;
 
