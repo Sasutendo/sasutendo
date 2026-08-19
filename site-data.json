@@ -103,6 +103,11 @@
       "label": "Throne",
       "icon": "🎁",
       "url": "https://throne.com/yuuki_yui"
+    },
+    {
+      "label": "Steam Wishlist",
+      "icon": "🎮",
+      "url": "https://store.steampowered.com/wishlist/id/Sasutendo/?sort=discount&st=10281845309481781812"
     }
   ],
   "links": [
@@ -167,6 +172,14 @@
       "description": "Send me a lil gift ♡",
       "icon": "🎁",
       "url": "https://throne.com/yuuki_yui",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "Steam Wishlist",
+      "description": "Games I’d love to play ♡",
+      "icon": "🎮",
+      "url": "https://store.steampowered.com/wishlist/id/Sasutendo/?sort=discount&st=10281845309481781812",
       "featured": false,
       "enabled": true
     },
