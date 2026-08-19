@@ -98,6 +98,11 @@
       "label": "GitHub",
       "icon": "⌘",
       "url": "https://github.com/Sasutendo"
+    },
+    {
+      "label": "Throne",
+      "icon": "🎁",
+      "url": "https://throne.com/yuuki_yui"
     }
   ],
   "links": [
@@ -154,6 +159,14 @@
       "description": "  Music vibe.",
       "icon": "♫",
       "url": "https://open.spotify.com/user/1z5q051gcrmu6ckbybvr16uj2?si=4e940770b45c44a4",
+      "featured": false,
+      "enabled": true
+    },
+    {
+      "title": "Throne Wishlist",
+      "description": "Send me a lil gift ♡",
+      "icon": "🎁",
+      "url": "https://throne.com/yuuki_yui",
       "featured": false,
       "enabled": true
     },
