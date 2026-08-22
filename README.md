@@ -16,7 +16,7 @@ I make cozy things, chaotic things, and sometimes things that are somehow both.
 
 ## 🌙 About me
 
-I'm **Yuuki**, also known as **Sasutendo**. I'm 21 and spend a lot of my time creating, gaming, coding, drawing, and collecting far too many ideas for future projects.
+I'm **Yuuki**, also known as **Sasutendo**. I'm 22 and spend a lot of my time creating, gaming, coding, drawing, and collecting far too many ideas for future projects.
 
 I like personal projects that feel a little different: cozy interfaces, dark fantasy, playful details, Minecraft experiments, and designs that actually feel like *me*.
 
