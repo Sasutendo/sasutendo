@@ -1387,8 +1387,12 @@ function setupIntroAndMusic() {
   const musicButton = $("#musicButton");
   const volumeSlider = $("#musicVolumeSlider");
   const volumeText = $("#musicVolumeText");
+  const volumeStorageKey = "sasutendo-music-volume";
 
-  const savedVolume = Number(siteData.theme.musicVolume ?? 0.22);
+  const storedVolume = Number(localStorage.getItem(volumeStorageKey));
+  const defaultVolume = Number(siteData.theme.musicVolume ?? 0.22);
+  const savedVolume = Number.isFinite(storedVolume) ? storedVolume : defaultVolume;
+
   bgMusic.volume = Math.min(1, Math.max(0, savedVolume));
 
   if (volumeSlider) {
@@ -1399,50 +1403,58 @@ function setupIntroAndMusic() {
     volumeText.textContent = `${Math.round(bgMusic.volume * 100)}%`;
   }
 
-  function updateMusicButton() {
-    musicButton.textContent = bgMusic.paused ? "♪ Music Off" : "♪ Music On";
+  function updateMusicButton(isPlaying = !bgMusic.paused) {
+    musicButton.textContent = isPlaying ? "♪ Music On" : "♪ Music Off";
+    musicButton.setAttribute("aria-pressed", String(isPlaying));
   }
 
-  async function playMusic() {
-    try {
-      bgMusic.volume = Number(siteData.theme.musicVolume ?? 0.22);
-      await bgMusic.play();
-      updateMusicButton();
-    } catch {
-      updateMusicButton();
+  function playMusic() {
+    if (!bgMusic.paused) {
+      updateMusicButton(true);
+      return;
+    }
+
+    // Update immediately so the control never waits for mobile audio decoding.
+    updateMusicButton(true);
+
+    const playRequest = bgMusic.play();
+    if (playRequest && typeof playRequest.catch === "function") {
+      playRequest.catch(() => updateMusicButton(false));
     }
   }
 
-  enterButton.addEventListener("click", async () => {
+  enterButton.addEventListener("click", () => {
     introScreen.classList.add("hidden");
     app.classList.remove("hidden");
-    await playMusic();
+    playMusic();
   });
 
-  musicButton.addEventListener("click", async () => {
+  musicButton.addEventListener("click", () => {
     if (bgMusic.paused) {
-      await playMusic();
-    } else {
-      bgMusic.pause();
-      updateMusicButton();
+      playMusic();
+      return;
     }
+
+    bgMusic.pause();
+    updateMusicButton(false);
   });
+
+  bgMusic.addEventListener("play", () => updateMusicButton(true));
+  bgMusic.addEventListener("pause", () => updateMusicButton(false));
 
   if (volumeSlider) {
     volumeSlider.addEventListener("input", () => {
       const volume = Number(volumeSlider.value) / 100;
 
       bgMusic.volume = volume;
-      siteData.theme.musicVolume = volume;
 
       if (volumeText) {
         volumeText.textContent = `${Math.round(volume * 100)}%`;
       }
 
-      saveData();
-
-      // Let other open tabs update too
-      localStorage.setItem("sasutendo-site-sync", String(Date.now()));
+      // Volume is a visitor preference. Keep it local and avoid a network save
+      // for every tiny slider movement.
+      localStorage.setItem(volumeStorageKey, String(volume));
     });
   }
 
@@ -1475,7 +1487,8 @@ function setupCursorTrail() {
   if (cursorTrailReady) return;
   cursorTrailReady = true;
 
-  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+  const isTouch = window.matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints > 0;
+  if (isTouch) return;
 
   window.addEventListener("pointermove", (event) => {
     const style = siteData.theme.cursorTrail || "none";
