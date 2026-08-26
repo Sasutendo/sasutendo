@@ -2020,6 +2020,22 @@ body.owner-mode .admin-button {
   }
 }
 
+#musicButton {
+  min-inline-size: 112px;
+  justify-content: center;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .volume-popover {
+    background: rgba(18, 16, 30, 0.985);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transform: none;
+    transition: opacity 0.12s ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+  }
+}
+
 /* =========================================================
    CUSTOM CARD OPACITY + NAME COLOR
    ========================================================= */
